@@ -1,0 +1,43 @@
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- sorry
+templates:
+  utter_greet:
+  - text: Hey! How are you?
+  - text: Howdy! How are you today?
+  - text: Hi! How do you do?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_sad:
+    - text: I'm sure it's not pleasant to be sad
+    - text: We are only here for a short while
+  utter_happy:
+  - text: Great, carry on!
+  - text: What makes you happy just now?
+  utter_goodbye:
+  - text: Bye
+  - text: Bye bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_nosorry:
+  - text: Please don't apologize
+  - text: Apologies are not necessary
+  - text: What feelings do you have when you apologize
+actions:
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
+- utter_nosorry
+
