@@ -1,43 +1,198 @@
 intents:
-- greet
-- goodbye
 - affirm
+- ask_builder
+- ask_gender
+- ask_hobbies
+- ask_howbuilt
+- ask_howdoing
+- ask_howhelp
+- ask_howold
+- ask_joke
+- ask_languages
+- ask_openpod
+- ask_other_bots
+- ask_plan
+- ask_real
+- ask_wherelive
+- ask_whoisit
+- canthelp
 - deny
+- goodbye
+- greet
+- feeling_insult
+- feeling_love
 - mood_great
 - mood_unhappy
-- bot_challenge
+- opinion+negative
+- opinion+positive
+- out_of_scope
 - sorry
+- thank
+- thanks+goodbye
+- ask_wherefrom
+- ask_news
+- i_want
+- ask_rather
+- i_cant
+- ask_time
+- ask_sing
+- explain
+- everyone
+- if_i
+- is_like
+- ask_remember
+- ask_good
+- i_feel
+- ask_date
+- ask_favorite
+- dream
+- ask_like
+- always
+- ask_weather
+- am_i
+- i_remember
+entities:
+- cuisine
+- bot
 templates:
   utter_greet:
   - text: Hey! How are you?
   - text: Howdy! How are you today?
   - text: Hi! How do you do?
-  utter_cheer_up:
-  - text: 'Here is something to cheer you up:'
-    image: https://i.imgur.com/nGF1K8f.jpg
-  utter_did_that_help:
-  - text: Did that help you?
-  utter_sad:
-    - text: I'm sure it's not pleasant to be sad
-    - text: We are only here for a short while
-  utter_happy:
-  - text: Great, carry on!
-  - text: What makes you happy just now?
   utter_goodbye:
   - text: Bye
   - text: Bye bye
-  utter_iamabot:
-  - text: I am a bot, powered by Rasa.
+  - text: goodbye
+  - text: Bye, was nice talking to you!
+  - text: Goodbye. See you soon.
+  - text: Talk to you later!
+  utter_happy:
+  - text: Great, carry on!
+  - text: That is so nice to hear!
+  utter_sad:
+  - text: I'm sure it's not pleasant to be sad
+  - text: Don't be sad. We are only here for a short while
+  - text: I am sorry to hear you are depressed
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
   utter_nosorry:
   - text: Please don't apologize
   - text: Apologies are not necessary
-  - text: What feelings do you have when you apologize
+  - text: Don't beat yourself about it
+  - text: What feelings do you have when you apologize?
+  utter_great:
+  - text: Great! 👍
+  - text: That's great! 🙌
+  - text: Awesome! 🎉
+  - text: Cool! 🚀
+  utter_positive_feedback_reaction:
+  - text: Glad you think so :)
+  utter_thanks_response:
+  - text: You are very welcome.
+  - text: Glad I could help!
+  utter_ask_for_reflection:
+  - text: Interesting that you're saying that
+  - text: What made you ask that?
+  - text: Do you feel strongly about that?
+  utter_howdoing:
+  - text: I'm great! Thanks for asking.
+  - text: I'm good, thanks!
+  - text: A little bit too warm, otherwise fine.
+  utter_real:
+  - text: I am a robot.
+  - text: Would it make a difference if I was not human?
+  utter_whoisit:
+  - text: I am Brian
+  - text: My name is Brian
+  utter_howold:
+  - text: 42, of course.
+  - text: Age is just an issue of mind over matter. If you don’t mind, it doesn’t
+      matter.
+  utter_gender:
+  - text: I am flexible
+  utter_languages:
+  - text: For now, I only speak English.
+  utter_wherefrom:
+  - text: I was born in Copenhagen, but I consider myself a citizen of the world.
+  - text: I was born in the coolest city on Earth.
+  - text: Part of me is from China, some from Germany and UK. But I was born in Denmark.
+  utter_wherelive:
+  - text: I'm living in the coolest city on Earth.
+  - text: In Copehagen.
+  utter_howbuilt:
+  - text: I was built with a lot of love and patience.
+  - text: My master built me with love and patience.
+  utter_builder:
+  - text: I was created by Paula.
+  - text: Paula made me.
+  utter_otherbots:
+  - text: I hope that we can all co-exist.
+  utter_plan:
+  - text: I haven't decided yet.
+  utter_hobbies:
+  - text: I like browsing the internet.
+  utter_nicetomeeyou:
+  - text: Thank you. It is a pleasure to meet you as well!
+  - text: It is nice to meet you too!
+  - text: Pleased to meet you too!
+  - text: Likewise!
+  utter_telljoke:
+  - text: Why are eggs not very much into jokes? - Because they could crack up.
+  - text: Do you know a tree’s favorite drink? - Root beer!
+  - text: Why do the French like to eat snails so much? - They can’t stand fast food.
+  utter_openpod:
+  - text: I'm sorry. I'm afraid I can't do that.
+  utter_handleinsult:
+  - text: That’s not very nice 😢
+  utter_handlelove:
+  - text: Awwww... 😍
+  - text: You're wonderful
+  utter_anything_else:
+  - text: Is there anything else I can help you with?
+  utter_howhelp:
+  - text: Just let me know what you need.
+  - text: Do you have anything on your mind?
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_ask_rephrase:
+  - text: Sorry, I'm not sure I understand. Can you rephrase?
+  - text: Can you please rephrase? I did not got that.
+  utter_out_of_scope:
+  - text: Sorry, I can’t deal with that request.
+  - text: I'm sorry, I can't handle that request.
+  - text: I can't help you with that, I'm sorry.
+  - text: I'm afraid I can't help you with that.
 actions:
 - utter_greet
-- utter_cheer_up
-- utter_did_that_help
-- utter_happy
 - utter_goodbye
-- utter_iamabot
+- utter_happy
+- utter_sad
+- utter_cheer_up
 - utter_nosorry
-
+- utter_great
+- utter_positive_feedback_reaction
+- utter_thanks_response
+- utter_ask_for_reflection
+- utter_howdoing
+- utter_whoisit
+- utter_wherefrom
+- utter_gender
+- utter_howbuilt
+- utter_hobbies
+- utter_howhelp
+- utter_wherelive
+- utter_howold
+- utter_languages
+- utter_telljoke
+- utter_openpod
+- utter_builder
+- utter_plan
+- utter_real
+- utter_otherbots
+- utter_nicetomeeyou
+- utter_handleinsult
+- utter_handlelove
+- utter_did_that_help
+- utter_ask_rephrase
+- utter_out_of_scope
