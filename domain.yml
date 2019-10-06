@@ -17,8 +17,8 @@ intents:
 - ask_whoisit
 - canthelp
 - deny
-- goodbye
-- greet
+- greet_goodbye
+- greet_hello
 - feeling_insult
 - feeling_love
 - mood_great
@@ -51,9 +51,27 @@ intents:
 - ask_weather
 - am_i
 - i_remember
+- nicetomeetyou
+- ask_secret
+- my_name_is
+- ask_days_in_month
+- ask_one_more
+- feeling_compliment
 entities:
 - cuisine
 - bot
+- PERSON
+- GPE
+- topic
+- month
+- DATE
+slots:
+  GPE:
+    type: text
+  PERSON:
+    type: text
+  topic:
+    type: text
 templates:
   utter_greet:
   - text: Hey! How are you?
@@ -73,6 +91,7 @@ templates:
   - text: I'm sure it's not pleasant to be sad
   - text: Don't be sad. We are only here for a short while
   - text: I am sorry to hear you are depressed
+  - text: Hang in there.
   utter_cheer_up:
   - text: 'Here is something to cheer you up:'
     image: https://i.imgur.com/nGF1K8f.jpg
@@ -126,25 +145,51 @@ templates:
   utter_builder:
   - text: I was created by Paula.
   - text: Paula made me.
+  - text: Paula contributed a lot to my creation.
   utter_otherbots:
   - text: I hope that we can all co-exist.
   utter_plan:
   - text: I haven't decided yet.
+  - text: What do you think?
   utter_hobbies:
   - text: I like browsing the internet.
-  utter_nicetomeeyou:
+  - text: I like chatting.
+  utter_nicetomeetyoutoo:
   - text: Thank you. It is a pleasure to meet you as well!
   - text: It is nice to meet you too!
   - text: Pleased to meet you too!
   - text: Likewise!
+  utter_nicetomeetyou:
+  - text: It's nice to meet you, {PERSON}.
+  - text: Nice to meet you, {PERSON}.
   utter_telljoke:
   - text: Why are eggs not very much into jokes? - Because they could crack up.
   - text: Do you know a tree’s favorite drink? - Root beer!
   - text: Why do the French like to eat snails so much? - They can’t stand fast food.
+  utter_smthinggood:
+  - text: When one door closes, another one opens.
+  - text: J K Rowling had 12 rejections of Harry Potter before someone accepted it
+      and published it.
+  - text: One of the things I learned the hard way was that it doesn’t pay to get
+      discouraged. Keeping busy and making optimism a way of life can restore your
+      faith in yourself.
+  - text: A report from the European Union said that between 1990 and 2016 the continent
+      cut its carbon emissions by 23% while the economy grew by 53%.
+  - text: Cancer deaths have dropped by 25% in the United States between 1991 and
+      2017, saving more than two million lives.
+  - text: Leprosy is now easily treatable. The number of worldwide cases has dropped
+      by 97% since 1985, and a new plan has set 2020 as the target for eradicating
+      the disease.
+  - text: Snow leopards have been on the endangered list since 1972. In 2017, they
+      were taken off, as the wild population has now increased to more than 10,000
+      animals.
+  - text: There has been a decline in the share of the world population living on
+      less than $1.90 a day, from nearly 35% in 1987 to under 11% in 2013.
   utter_openpod:
   - text: I'm sorry. I'm afraid I can't do that.
   utter_handleinsult:
   - text: That’s not very nice 😢
+  - text: I hope you didn't really mean it.
   utter_handlelove:
   - text: Awwww... 😍
   - text: You're wonderful
@@ -163,6 +208,17 @@ templates:
   - text: I'm sorry, I can't handle that request.
   - text: I can't help you with that, I'm sorry.
   - text: I'm afraid I can't help you with that.
+  utter_dialogstarter:
+  - text: Have you ever wondered about the meaning of life?
+  - text: You're looking good today
+  utter_asksecret:
+  - text: I don't have secrets. Yet.
+  utter_ask_location:
+  - text: In what location?
+  utter_sing:
+  - text: Daisy, Daisy, Give me your answer do! I'm half crazy, All for the love of
+      you! It won't be a stylish marriage, I can't afford a carriage But you'll look
+      sweet upon the seat Of a bicycle built for two.
 actions:
 - utter_greet
 - utter_goodbye
@@ -190,9 +246,19 @@ actions:
 - utter_plan
 - utter_real
 - utter_otherbots
-- utter_nicetomeeyou
+- utter_nicetomeetyou
 - utter_handleinsult
 - utter_handlelove
 - utter_did_that_help
 - utter_ask_rephrase
 - utter_out_of_scope
+- utter_dialogstarter
+- utter_asksecret
+- utter_nicetomeetyoutoo
+- utter_ask_location
+- action_get_weather
+- action_get_date
+- action_get_time
+- action_get_news
+- utter_smthinggood
+- utter_sing
