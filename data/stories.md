@@ -79,8 +79,8 @@
   - action_get_date
 
 ## user asks for days in month
-* ask_days_in_month{"DATE": "January"}
-  - slot{"DATE": "January"}
+* ask_days_in_month{"month": "January"}
+  - slot{"month": "January"}
   - action_get_daysinmonth
 
 ## user asks for days in month story 2

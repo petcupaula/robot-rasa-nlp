@@ -31,32 +31,32 @@ intents:
 - thanks+goodbye
 - ask_wherefrom
 - ask_news
-- i_want
 - ask_rather
-- i_cant
 - ask_time
 - ask_sing
-- explain
-- everyone
-- if_i
-- is_like
-- ask_remember
 - ask_good
-- i_feel
 - ask_date
 - ask_favorite
-- dream
 - ask_like
-- always
 - ask_weather
-- am_i
-- i_remember
 - nicetomeetyou
 - ask_secret
 - my_name_is
 - ask_days_in_month
 - ask_one_more
 - feeling_compliment
+- reflect_ask_remember
+- reflect_everyone
+- reflect_explain
+- reflect_i_want
+- reflect_dream
+- reflect_am_i
+- reflect_i_feel
+- reflect_i_remember
+- reflect_if_i
+- reflect_always
+- reflect_is_like
+- reflect_i_cant
 entities:
 - cuisine
 - bot
@@ -64,6 +64,7 @@ entities:
 - GPE
 - topic
 - DATE
+- month
 slots:
   DATE:
     type: text
@@ -71,6 +72,21 @@ slots:
     type: text
   PERSON:
     type: text
+  month:
+    type: categorical
+    values:
+    - january
+    - february
+    - march
+    - april
+    - may
+    - june
+    - july
+    - august
+    - september
+    - october
+    - november
+    - december
   topic:
     type: text
 templates:

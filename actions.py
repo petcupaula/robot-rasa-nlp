@@ -94,19 +94,10 @@ class ActionGetDaysInMonth(Action):
         today = datetime.today()
         month_now = today.strftime("%B")
         year_now = today.year
-        month_now = month_now[0].upper() + month_now[1:3].lower() #abbreviate month (ex: January to Jan)
 
-        saved_date = tracker.get_slot('DATE')
-        if not saved_date: 
-            saved_month = month_now
-        else:
-            if len(saved_date) < 3: 
-                saved_month = month_now
-            else:
-                saved_month = saved_date[0].upper() + saved_date[1:3].lower()
-                if saved_month not in month_abbr:
-                    saved_month = month_now
-        
+        saved_month = (month_now, tracker.get_slot('month'))[bool(tracker.get_slot('month'))]
+        saved_month = saved_month[0].upper() + saved_month[1:3].lower()
+
         month_to_num = {name: num for num, name in enumerate(month_abbr) if num}
         month_num = month_to_num[saved_month]
         days = monthrange(year_now,month_num)[1]
