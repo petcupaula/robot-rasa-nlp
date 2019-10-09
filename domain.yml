@@ -63,9 +63,10 @@ entities:
 - PERSON
 - GPE
 - topic
-- month
 - DATE
 slots:
+  DATE:
+    type: text
   GPE:
     type: text
   PERSON:
@@ -262,3 +263,4 @@ actions:
 - action_get_news
 - utter_smthinggood
 - utter_sing
+- action_get_daysinmonth

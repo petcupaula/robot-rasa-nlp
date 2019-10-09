@@ -78,6 +78,15 @@
 * ask_date
   - action_get_date
 
+## user asks for days in month
+* ask_days_in_month{"DATE": "January"}
+  - slot{"DATE": "January"}
+  - action_get_daysinmonth
+
+## user asks for days in month story 2
+* ask_days_in_month
+  - action_get_daysinmonth
+
 ## Open the pod
 * ask_openpod
   - utter_openpod

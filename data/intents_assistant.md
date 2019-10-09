@@ -51,8 +51,19 @@
 - What's the date?
 
 ## intent:ask_days_in_month
-- How many days in [January](month)
-- How many days in [Feb](month)
+- How many days in [January](DATE)
+- How many days in [February](DATE)
+- How many days are there in [March](DATE)
+- How many days in [April](DATE)
+- Number of days in [May](DATE)
+- Number of days in [June](DATE)?
+- How many days in [July](DATE)?
+- What's the number of days in [August](DATE)?
+- How many days are there in this month?
+- How many days are there in [September](DATE)
+- How many days in [October](DATE)?
+- How many days in [November](DATE)
+- How many days in [December](DATE)?
 
 ## intent:ask_favorite
 - What is your favorite [food](topic)?

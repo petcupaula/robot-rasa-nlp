@@ -82,6 +82,40 @@ class ActionGetTime(Action):
 
         return []
 
+class ActionGetDaysInMonth(Action):
+
+    def name(self) -> Text:
+        return 'action_get_daysinmonth'
+
+    def run(self, dispatcher, tracker, domain) -> List[Dict[Text, Any]]:
+        from datetime import datetime
+        from calendar import monthrange, month_abbr, month_name
+
+        today = datetime.today()
+        month_now = today.strftime("%B")
+        year_now = today.year
+        month_now = month_now[0].upper() + month_now[1:3].lower() #abbreviate month (ex: January to Jan)
+
+        saved_date = tracker.get_slot('DATE')
+        if not saved_date: 
+            saved_month = month_now
+        else:
+            if len(saved_date) < 3: 
+                saved_month = month_now
+            else:
+                saved_month = saved_date[0].upper() + saved_date[1:3].lower()
+                if saved_month not in month_abbr:
+                    saved_month = month_now
+        
+        month_to_num = {name: num for num, name in enumerate(month_abbr) if num}
+        month_num = month_to_num[saved_month]
+        days = monthrange(year_now,month_num)[1]
+
+        response = """{} has {} days.""".format(month_name[month_num], days)
+        dispatcher.utter_message(response)
+
+        return []
+
 class ActionGetNews(Action):
 
     def name(self) -> Text:
@@ -91,9 +125,8 @@ class ActionGetNews(Action):
         import requests
         import json
 
-        topic = tracker.get_slot('topic')
-        if not topic: 
-            topic = 'all'
+        topic = ('all', tracker.get_slot('topic'))[bool(tracker.get_slot('topic'))]
+
         url = 'https://api.nytimes.com/svc/news/v3/content/all/{topic}.json'.format(topic=topic)
         api_key = os.environ['NYTKEY']
         params = {'api-key': api_key, 'limit': 5}
