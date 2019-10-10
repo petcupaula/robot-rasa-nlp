@@ -28,47 +28,19 @@
 * greet_goodbye
   - utter_goodbye
 
-## bot challenge
-* ask_real
-  - utter_real
-* ask_whoisit
-  - utter_whoisit
-* ask_howold
-  - utter_howold
-* ask_wherefrom
-  - utter_wherefrom
-* ask_gender
-  - utter_gender
-* ask_wherelive
-  - utter_wherelive
-* ask_languages
-  - utter_languages
-* ask_howdoing
-  - utter_howdoing
-* ask_howbuilt
-  - utter_howbuilt
-* ask_builder
-  - utter_builder
-* ask_hobbies
-  - utter_hobbies
-* ask_other_bots
-  - utter_otherbots
-* ask_plan
-  - utter_plan
-* ask_sing
-  - utter_sing
-* ask_good
-  - utter_smthinggood
+## chitchat / bot challenge
+* ask_real OR ask_whoisit OR ask_builder OR ask_howdoing OR ask_languages OR ask_howold OR ask_gender OR ask_wherelive OR ask_howbuilt OR ask_hobbies OR ask_otherbots OR ask_plan OR ask_sing OR ask_good OR ask_restaurant OR ask_wherefrom OR ask_openpod OR ask_secret
+  - action_chitchat
 
 ## user asks for a joke story 1
 * ask_joke
-  - utter_telljoke
+  - utter_ask_joke
 
 ## user asks for a joke story 2
 * ask_joke
-  - utter_telljoke
+  - utter_ask_joke
 * ask_one_more
-  - utter_telljoke
+  - utter_ask_joke
 
 ## user asks for time
 * ask_time
@@ -85,11 +57,8 @@
 
 ## user asks for days in month story 2
 * ask_days_in_month
+  - slot{"month": null}
   - action_get_daysinmonth
-
-## Open the pod
-* ask_openpod
-  - utter_openpod
 
 ## user asks what it can do
 * ask_howhelp
@@ -119,7 +88,7 @@
 * greet_hello
     - utter_greet
 * ask_howold
-    - utter_howold
+    - utter_ask_howold
 * feeling_love
     - utter_handlelove
 
@@ -130,10 +99,6 @@
 ## Nice to meet you
 * nicetomeetyou
   - utter_nicetomeetyoutoo
-
-## Tell me a secret
-* ask_secret
-  - utter_asksecret
 
 ## my name is
 * my_name_is

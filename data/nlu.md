@@ -199,12 +199,20 @@
 - what about your day
 - What's new?
 - What's up
+- how r u ?
 
 ## intent:ask_howhelp
 - How can you help me?
 
 ## intent:ask_howold
 - how old are you?
+- whats your age?
+- what year were you born?
+- can you tell me your age?
+- How long have you been alive?
+- Whats your age?
+- and you are how many years old?
+- whats your birth year?
 
 ## intent:ask_joke
 - Tell me a joke
@@ -212,9 +220,19 @@
 - Tell me another joke
 - Can you tell jokes
 - Can you tell me a joke?
+- Know any jokes?
 
 ## intent:ask_languages
 - Which languages do you speak?
+- What languages can you use?
+- What languages do you know?
+- do you speak any other languages?
+- what else do you know besides English?
+- are you bilingual?
+- are you multilingual?
+- How many languages can you speak?
+- What languages are you fluent in?
+- How many different languages are you fluent in?
 
 ## intent:ask_like
 - Do you like [mexican](cuisine) food?
@@ -242,7 +260,7 @@
 ## intent:ask_openpod
 - Open the pod bay doors
 
-## intent:ask_other_bots
+## intent:ask_otherbots
 - What do you think of [Alexa](bot)?
 - Do you like [Cortana](bot)?
 - What do you think of the [Google Assistant](bot)?
@@ -280,6 +298,62 @@
 - I don't want to talk to a computer
 - You're just a machine
 
+## intent:ask_restaurant
+- restaurants
+- can i be shown a gluten free restaurant
+- i want a french restaurant
+- i'm looking for a Chinese restaurant
+- I need a new restaurant
+- help me find restaurant
+- I'm gonna need help finding a restaurant
+- Hey help me find a restaurant
+- How can you help me find a restaurant.
+- Where is the restaurant
+- Show me how to find a restaurant
+- I need to find this restaurant
+- Help me with finding this restaurant
+- Hey, can you help me with locating this restaurant.
+- Find me a place to eat
+- Can you recommend a restaurant open right now
+- What's the closest restaurant open near me
+- I am hungry, find me some place to go
+- Suggest me a good restaurant around
+- Show me the closest open restaurant
+- What's a good place to eat nearby
+- Recommend me a restaurant around here.
+- Pick a restaurant for me, please
+- Help me find a restaurant
+- Can you find a restaurant for me?
+- Find a restaurant for me?
+- Would you find me a restaurant?
+- Would you find a restaurant for me?
+- Could you find me a restaurant?
+- Could you find a restaurant for me?
+- Could you find me a restaurant to eat at?
+- Find a restaurant for me to eat at.
+- Find me a restaurant where I can eat.
+- Find a restaurant for me where I can eat.
+- I need a restaurant.
+- Can you find me a restaurant?
+- Where should I eat?
+- Where should I go for dinner?
+- Any good restaurants nearby?
+- Can you find me a burger joint?
+- I'm looking for a Spanish restaurant.
+- What restaurant would you recommend for dinner?
+- Hi, can you give me the nearest fast food place?
+- Find me a fast food restaurant.
+- Do you find me a restaurant?
+- Is there any restaurant?
+- IS there any near by restaurant?
+- Could you find me a restaurant?
+- can you find me a restaurant?
+- Would you find any restaurant?
+- Do you seek me a restaurant?
+- Have you seen me a restaurant?
+- Will you find me a restaurant?
+- will you see any restaurant for me?
+
 ## intent:ask_secret
 - Can you tell me a secret?
 - Would you like to share a secret with me?
@@ -293,6 +367,24 @@
 ## intent:ask_time
 - What time is it?
 - What's the time?
+- whats the time now
+- what is the time ?
+- Can you give me the time?
+- Time?
+- Do you know the time?
+- Can you tell the time?
+- Give me the time.
+- Tell me the time.
+- Could you tell me what time is it?
+- Excuse me, what time is it?
+- What is the current time?
+- What is the hour and minute right now?
+- What time have we got?
+- What time is it right now?
+- What time do we have?
+- what time do you have?
+- do you have the time?
+- Can you tell me the time?
 
 ## intent:ask_weather
 - What's the weather like?
@@ -305,6 +397,8 @@
 - what is the weather
 - what is the weather in [New Zealand](GPE)
 - whats the weather
+- Weather?
+- Is it raining?
 - What's the weather in [Berlin](GPE) at the moment?
 - What's the weather today?
 - What's the weather in [London](GPE) today?
@@ -382,6 +476,20 @@
 - I wanna kill you
 - You annoy me
 - You are stupid
+- You're an idiot.
+- You are a fool.
+- You're foolish.
+- You are dumb.
+- You have no sense.
+- You are unintelligent.
+- You have no brains.
+- You have no intelligence.
+- You are dumb.
+- You lack intelligence.
+- You are unknowing.
+- You are shortsighted.
+- Your intelligence is laughable.
+- you asshole
 
 ## intent:feeling_love
 - Love you

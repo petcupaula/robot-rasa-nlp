@@ -130,3 +130,29 @@ class ActionGetNews(Action):
             message = str(i) + "." + results['abstract']
             dispatcher.utter_message(message)
         return []
+
+class ActionChitchat(Action):
+    """Returns the chitchat utterance dependent on the intent"""
+
+    def name(self) -> Text:
+        """Unique identifier of the action"""
+
+        return 'action_chitchat'
+
+    def run(self,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List:
+
+        intent = tracker.latest_message['intent'].get('name')
+
+        # retrieve the correct chitchat utterance dependent on the intent
+        if intent in ['ask_builder', 'ask_gender', 'ask_good', 
+                      'ask_hobbies','ask_howbuilt', 'ask_howdoing',
+                      'ask_howold', 'ask_languages', 'ask_openpod', 
+                      'ask_otherbots','ask_plan', 'ask_real', 
+                      'ask_secret', 'ask_sing', 'ask_wherefrom', 
+                      'ask_wherelive', 'ask_whoisit', 'ask_restaurant']:
+            dispatcher.utter_template('utter_' + intent, tracker)
+
+        return []

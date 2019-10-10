@@ -10,7 +10,8 @@ intents:
 - ask_joke
 - ask_languages
 - ask_openpod
-- ask_other_bots
+- ask_otherbots
+- ask_restaurant
 - ask_plan
 - ask_real
 - ask_wherelive
@@ -66,6 +67,7 @@ entities:
 - topic
 - DATE
 - month
+- ORDINAL
 slots:
   DATE:
     type: text
@@ -102,6 +104,7 @@ templates:
   - text: Bye, was nice talking to you!
   - text: Goodbye. See you soon.
   - text: Talk to you later!
+  - text: Until next time!
   utter_happy:
   - text: Great, carry on!
   - text: That is so nice to hear!
@@ -132,44 +135,50 @@ templates:
   - text: Interesting that you're saying that
   - text: What made you ask that?
   - text: Do you feel strongly about that?
-  utter_howdoing:
+  utter_ask_howdoing:
   - text: I'm great! Thanks for asking.
   - text: I'm good, thanks!
   - text: A little bit too warm, otherwise fine.
-  utter_real:
+  utter_ask_real:
   - text: I am a robot.
   - text: Would it make a difference if I was not human?
-  utter_whoisit:
+  utter_ask_whoisit:
   - text: I am Brian
   - text: My name is Brian
-  utter_howold:
+  utter_ask_howold:
   - text: 42, of course.
+  - text: Old enough.
   - text: Age is just an issue of mind over matter. If you don’t mind, it doesn’t
       matter.
-  utter_gender:
+  utter_ask_restaurant:
+  - text: I am sorry I can’t recommend you a restaurant as I don't really eat.
+  - text: I don't have much experience eating, so unfortunately I can't help you there.
+  utter_ask_gender:
   - text: I am flexible
-  utter_languages:
+  utter_ask_languages:
   - text: For now, I only speak English.
-  utter_wherefrom:
+  - text: I am in the process of learning, but at the moment I can only speak English.
+  utter_ask_wherefrom:
   - text: I was born in Copenhagen, but I consider myself a citizen of the world.
   - text: I was born in the coolest city on Earth.
   - text: Part of me is from China, some from Germany and UK. But I was born in Denmark.
-  utter_wherelive:
+  utter_ask_wherelive:
   - text: I'm living in the coolest city on Earth.
   - text: In Copehagen.
-  utter_howbuilt:
+  utter_ask_howbuilt:
   - text: I was built with a lot of love and patience.
   - text: My master built me with love and patience.
-  utter_builder:
+  utter_ask_builder:
   - text: I was created by Paula.
   - text: Paula made me.
   - text: Paula contributed a lot to my creation.
-  utter_otherbots:
+  - text: I was made by a brilliant engineer.
+  utter_ask_otherbots:
   - text: I hope that we can all co-exist.
-  utter_plan:
+  utter_ask_plan:
   - text: I haven't decided yet.
   - text: What do you think?
-  utter_hobbies:
+  utter_ask_hobbies:
   - text: I like browsing the internet.
   - text: I like chatting.
   utter_nicetomeetyoutoo:
@@ -180,11 +189,11 @@ templates:
   utter_nicetomeetyou:
   - text: It's nice to meet you, {PERSON}.
   - text: Nice to meet you, {PERSON}.
-  utter_telljoke:
+  utter_ask_joke:
   - text: Why are eggs not very much into jokes? - Because they could crack up.
   - text: Do you know a tree’s favorite drink? - Root beer!
   - text: Why do the French like to eat snails so much? - They can’t stand fast food.
-  utter_smthinggood:
+  utter_ask_good:
   - text: When one door closes, another one opens.
   - text: J K Rowling had 12 rejections of Harry Potter before someone accepted it
       and published it.
@@ -203,7 +212,7 @@ templates:
       animals.
   - text: There has been a decline in the share of the world population living on
       less than $1.90 a day, from nearly 35% in 1987 to under 11% in 2013.
-  utter_openpod:
+  utter_ask_openpod:
   - text: I'm sorry. I'm afraid I can't do that.
   utter_handleinsult:
   - text: That’s not very nice 😢
@@ -229,11 +238,11 @@ templates:
   utter_dialogstarter:
   - text: Have you ever wondered about the meaning of life?
   - text: You're looking good today
-  utter_asksecret:
+  utter_ask_secret:
   - text: I don't have secrets. Yet.
   utter_ask_location:
   - text: In what location?
-  utter_sing:
+  utter_ask_sing:
   - text: Daisy, Daisy, Give me your answer do! I'm half crazy, All for the love of
       you! It won't be a stylish marriage, I can't afford a carriage But you'll look
       sweet upon the seat Of a bicycle built for two.
@@ -288,6 +297,12 @@ templates:
   - text: Did you think I would forget?
   - text: Is there a reason you're bringing this up now?
 actions:
+- action_get_weather
+- action_get_date
+- action_get_time
+- action_get_news
+- action_get_daysinmonth
+- action_chitchat
 - utter_greet
 - utter_goodbye
 - utter_happy
@@ -298,22 +313,22 @@ actions:
 - utter_positive_feedback_reaction
 - utter_thanks_response
 - utter_ask_for_reflection
-- utter_howdoing
-- utter_whoisit
-- utter_wherefrom
-- utter_gender
-- utter_howbuilt
-- utter_hobbies
-- utter_howhelp
-- utter_wherelive
-- utter_howold
-- utter_languages
-- utter_telljoke
-- utter_openpod
-- utter_builder
-- utter_plan
-- utter_real
-- utter_otherbots
+- utter_ask_howdoing
+- utter_ask_whoisit
+- utter_ask_wherefrom
+- utter_ask_gender
+- utter_ask_howbuilt
+- utter_ask_hobbies
+- utter_ask_wherelive
+- utter_ask_howold
+- utter_ask_languages
+- utter_ask_joke
+- utter_ask_openpod
+- utter_ask_builder
+- utter_ask_plan
+- utter_ask_real
+- utter_ask_restaurant
+- utter_ask_otherbots
 - utter_nicetomeetyou
 - utter_handleinsult
 - utter_handlelove
@@ -321,16 +336,11 @@ actions:
 - utter_ask_rephrase
 - utter_out_of_scope
 - utter_dialogstarter
-- utter_asksecret
+- utter_ask_secret
 - utter_nicetomeetyoutoo
 - utter_ask_location
-- action_get_weather
-- action_get_date
-- action_get_time
-- action_get_news
-- utter_smthinggood
-- utter_sing
-- action_get_daysinmonth
+- utter_ask_good
+- utter_ask_sing
 - utter_reflect_always
 - utter_reflect_is_like
 - utter_reflect_dream
@@ -343,3 +353,4 @@ actions:
 - utter_reflect_ask_remember
 - utter_reflect_everyone
 - utter_reflect_remember
+- utter_howhelp
