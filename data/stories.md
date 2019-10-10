@@ -280,3 +280,8 @@
 ## motor action story 1
 * ask_motor_action{"motor_action":"Move","body_part":"Head"}
   - action_motortask
+
+## summon voice assistant story 1
+* summon_assistant{"bot":"Alexa"}
+  - slot{"bot":"Alexa"}
+  - action_tell_assistant

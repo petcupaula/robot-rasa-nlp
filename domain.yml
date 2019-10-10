@@ -60,6 +60,7 @@ intents:
 - reflect_i_cant
 - reflect_never
 - ask_motor_action
+- summon_assistant
 entities:
 - cuisine
 - bot
@@ -79,6 +80,12 @@ slots:
     type: text
   PERSON:
     type: text
+  bot:
+    type: categorical
+    values:
+    - alexa
+    - google assistant
+    - cortana
   month:
     type: categorical
     values:
@@ -307,6 +314,8 @@ actions:
 - action_get_news
 - action_get_daysinmonth
 - action_chitchat
+- action_motortask
+- action_tell_assistant
 - utter_greet
 - utter_goodbye
 - utter_happy
@@ -358,4 +367,3 @@ actions:
 - utter_reflect_everyone
 - utter_reflect_remember
 - utter_howhelp
-- action_motortask

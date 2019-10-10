@@ -180,6 +180,23 @@ class ActionMotorTask(Action):
                 direction = e['value']
         
         print(",".join([body_part, motor_action, direction]))
+        # TO-DO: do the corresponding motor action
 
         return []
 
+class ActionTellAssistant(Action):
+
+    def name(self) -> Text:
+        return 'action_tell_assistant'
+
+    def run(self,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List:
+
+        bot = ('', tracker.get_slot('bot'))[bool(tracker.get_slot('bot'))]
+        
+        print(bot)
+        # TO-DO: send the request to the bot
+
+        return []

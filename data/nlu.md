@@ -254,12 +254,10 @@
 - Can you put your [arms](body_part) [up](direction)
 - Please pur your [arms](body_part) [down](direction)
 - [Close] your [left eye](body_part)
-- [Open] [mouth](body_part)
+- [Open] your [mouth](body_part)
 - Can you [touch](motor_action) your [right ear](body_part)
 - [Step](motor_action) to your [right](direction), please!
 - Put your [right arm](body_part) [up](direction)
-- Can you [rotate](motor_action) to your [left](direction)?
-- [Point](motor_action) to your [lips](body_part)
 
 ## intent:ask_news
 - What is happening in the [world](topic)?
@@ -706,6 +704,17 @@
 ## intent:sorry
 - sorry
 - I'm sorry
+
+## intent:summon_assistant
+- Ask [Alexa](bot) how the weather is like today
+- Ask [Alexa](bot) to set a reminder for tomorrow
+- Ask [Google Assistant](bot) to turn on the lights
+- Ask [Google Assistant](bot) how to get to work
+- Ask the [Google Assistant](bot:google assistant) to set a timer
+- Ask my [Google Assistant](bot) what I have on my agenda today
+- Can you tell [Alexa](bot) to set a reminder
+- Please tell the [Google Assistant](bot) to wake me up at 7 am.
+- Ask [Google Assistant](bot) to set the temperature to 25 degrees.
 
 ## intent:thank
 - Thanks
