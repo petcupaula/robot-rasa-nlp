@@ -92,9 +92,21 @@
 * feeling_love
     - utter_handlelove
 
-## Robot initiates dialogue
-- utter_dialogstarter
-  * affirm
+## Robot initiates dialogue based on outside message (random or sensors)
+* initiate_chitchat
+  - utter_dialogstarter
+
+## Robot initiates dialogue based on outside message and user answers story 1
+* initiate_chitchat
+  - utter_dialogstarter
+* maybe
+  - utter_maybe
+
+## Robot initiates dialogue based on outside message and user answers story 2
+* initiate_chitchat
+  - utter_dialogstarter
+* thank
+  - utter_thank
 
 ## Nice to meet you
 * nicetomeetyou

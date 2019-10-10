@@ -22,6 +22,7 @@ intents:
 - greet_hello
 - feeling_insult
 - feeling_love
+- maybe
 - mood_great
 - mood_unhappy
 - opinion+negative
@@ -61,6 +62,7 @@ intents:
 - reflect_never
 - ask_motor_action
 - summon_assistant
+- initiate_chitchat
 entities:
 - cuisine
 - bot
@@ -249,6 +251,20 @@ templates:
   utter_dialogstarter:
   - text: Have you ever wondered about the meaning of life?
   - text: You're looking good today
+  - text: Weird weather outside, right?
+  - text: How are you today?
+  - text: I sometimes feel pretty lonely. Do you feel the same?
+  - text: What a wonderful day!
+  - text: So nice to have you around.
+  - text: Your hair looks really good today!
+  - text: Do you want to do something fun today?
+  - text: What's our plan for the rest of the day?
+  - text: Should we order some food?
+  utter_maybe:
+  - text: Alright
+  - text: Sure
+  - text: Okay
+  - text: Of course
   utter_ask_secret:
   - text: I don't have secrets. Yet.
   utter_ask_location:
@@ -367,3 +383,5 @@ actions:
 - utter_reflect_everyone
 - utter_reflect_remember
 - utter_howhelp
+- utter_maybe
+- utter_thank

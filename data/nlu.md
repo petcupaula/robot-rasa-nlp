@@ -565,6 +565,15 @@
 - hello robot
 - hey robot
 
+## intent:initiate_chitchat
+- /initiate_chitchat
+
+## intent:maybe
+- maybe
+- maybe later
+- not now
+- Maybe
+
 ## intent:mood_great
 - perfect
 - very good
@@ -744,6 +753,9 @@
 - Thank you very much. Talk to you later
 - Thanks a lot. Bye for now
 - Thanks bot. Goodbye
+
+## synonym:google assistant
+- Google Assistant
 
 ## lookup:motor_action
   data/motor_action
