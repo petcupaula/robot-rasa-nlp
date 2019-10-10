@@ -47,7 +47,7 @@ intents:
 - feeling_compliment
 - reflect_ask_remember
 - reflect_everyone
-- reflect_explain
+- ask_explain
 - reflect_i_want
 - reflect_dream
 - reflect_am_i
@@ -57,6 +57,7 @@ intents:
 - reflect_always
 - reflect_is_like
 - reflect_i_cant
+- reflect_never
 entities:
 - cuisine
 - bot
@@ -236,6 +237,56 @@ templates:
   - text: Daisy, Daisy, Give me your answer do! I'm half crazy, All for the love of
       you! It won't be a stylish marriage, I can't afford a carriage But you'll look
       sweet upon the seat Of a bicycle built for two.
+  utter_reflect_feel:
+  - text: Do you often feel like that?
+  - text: What other feelings do you have?
+  - text: What do you think makes you feel like that?
+  utter_reflect_dream:
+  - text: But how do you feel about that in reality?
+  - text: What does this dream suggest to you?
+  - text: Do you believe that the dream has something to do with something that happened
+      yesterday?
+  - text: Do you often have that dream?
+  utter_reflect_want:
+  - text: What would it mean if you got what you want?
+  - text: Why do you want that?
+  - text: Suppose you got that soon.
+  utter_reflect_remember:
+  - text: Do you often think of that?
+  - text: What in the present situation reminds you of that?
+  - text: Does thinking of that bring anything else to your mind?
+  - text: What made you think about that?
+  utter_reflect_if_i:
+  - text: Do you really think it's likely that would happen?
+  - text: Do you wish that?
+  - text: Really?
+  - text: And what if?
+  utter_reflect_cant:
+  - text: Maybe you could try?
+  - text: And what if you could?
+  utter_reflect_everyone:
+  - text: Surely not everyone?
+  - text: Can you think of anyone in particular?
+  - text: Who, for example?
+  - text: Are you thinking of a particular person?
+  utter_reflect_always:
+  - text: Can you think of a specific example?
+  - text: Really? Always?
+  - text: When?
+  utter_reflect_never:
+  - text: Really? Never?
+  - text: Not even for a moment?
+  utter_reflect_am_i:
+  - text: Do you believe that you are?
+  - text: You wish I would tell you that you are indeed?
+  - text: What would it mean if that were true?
+  utter_reflect_is_like:
+  - text: What resemblence do you see?
+  - text: How?
+  - text: In what way?
+  utter_reflect_ask_remember:
+  - text: Did you think I would forget?
+  - text: Is there a reason you're bringing this up now?
 actions:
 - utter_greet
 - utter_goodbye
@@ -280,3 +331,15 @@ actions:
 - utter_smthinggood
 - utter_sing
 - action_get_daysinmonth
+- utter_reflect_always
+- utter_reflect_is_like
+- utter_reflect_dream
+- utter_reflect_feel
+- utter_reflect_if_i
+- utter_reflect_cant
+- utter_reflect_never
+- utter_reflect_want
+- utter_reflect_am_i
+- utter_reflect_ask_remember
+- utter_reflect_everyone
+- utter_reflect_remember

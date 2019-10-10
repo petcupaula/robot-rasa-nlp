@@ -264,3 +264,50 @@
 * greet_goodbye
   - utter_goodbye
 
+## reflect story 1
+* greet_hello
+  - utter_greet
+* reflect_i_feel
+  - utter_reflect_feel
+
+## reflect story 2
+* reflect_dream
+  - utter_reflect_dream
+* reflect_i_want
+  - utter_reflect_want
+* reflect_i_remember
+  - utter_reflect_remember
+* reflect_if_i
+  - utter_reflect_if_i
+
+## reflect story 3
+* reflect_i_cant
+  - utter_reflect_cant
+* reflect_everyone
+  - utter_reflect_everyone
+* reflect_always
+  - utter_reflect_always
+* reflect_am_i
+  - utter_reflect_am_i
+
+## reflect story 4
+* reflect_is_like
+  - utter_reflect_is_like
+* reflect_always
+  - utter_reflect_always
+* reflect_i_feel
+  - utter_reflect_feel
+
+## reflect story 5
+* reflect_ask_remember
+  - utter_reflect_ask_remember
+* reflect_never
+  - utter_reflect_never
+
+## reflect story 6
+* greet_hello
+    - utter_greet
+* mood_great
+    - utter_happy
+* reflect_ask_remember
+    - utter_reflect_ask_remember
