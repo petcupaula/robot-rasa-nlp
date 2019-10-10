@@ -59,6 +59,7 @@ intents:
 - reflect_is_like
 - reflect_i_cant
 - reflect_never
+- ask_motor_action
 entities:
 - cuisine
 - bot
@@ -68,6 +69,9 @@ entities:
 - DATE
 - month
 - ORDINAL
+- body_part
+- motor_action
+- direction
 slots:
   DATE:
     type: text
@@ -354,3 +358,4 @@ actions:
 - utter_reflect_everyone
 - utter_reflect_remember
 - utter_howhelp
+- action_motortask

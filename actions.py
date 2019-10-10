@@ -156,3 +156,30 @@ class ActionChitchat(Action):
             dispatcher.utter_template('utter_' + intent, tracker)
 
         return []
+
+class ActionMotorTask(Action):
+
+    def name(self) -> Text:
+        return 'action_motortask'
+
+    def run(self,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List:
+
+        body_part = motor_action = direction = ""
+
+        entities = tracker.latest_message['entities']
+
+        for e in entities:
+            if e['entity'] == 'body_part':
+                body_part = e['value']
+            elif e['entity'] == 'motor_action':
+                motor_action = e['value']
+            elif e['entity'] == 'direction':
+                direction = e['value']
+        
+        print(",".join([body_part, motor_action, direction]))
+
+        return []
+

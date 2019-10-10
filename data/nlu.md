@@ -238,6 +238,29 @@
 - Do you like [mexican](cuisine) food?
 - How do you feel about some [italian](cuisine) food?
 
+## intent:ask_motor_action
+- [Move](motor_action) your [head](body_part) to the [left](direction)
+- [Move](motor_action) [left leg](body_part) [up](direction)
+- [Arms](body_part) [up](direction)
+- [Arms](body_part) [down](direction)
+- [Close](motor_action) your [eyes](body_part)
+- [Bend](motor_action) [forward](direction)
+- [Walk](motor_action)
+- [Walk](motor_action) [forward](direction)
+- [Rotate](motor_action) to the [right](direction)
+- [Rotate](motor_action) [head](body_part) [right](direction)
+- [Touch](motor_action) your [nose](body_part)
+- Bring your [arms](body_part) [forward](direction)
+- Can you put your [arms](body_part) [up](direction)
+- Please pur your [arms](body_part) [down](direction)
+- [Close] your [left eye](body_part)
+- [Open] [mouth](body_part)
+- Can you [touch](motor_action) your [right ear](body_part)
+- [Step](motor_action) to your [right](direction), please!
+- Put your [right arm](body_part) [up](direction)
+- Can you [rotate](motor_action) to your [left](direction)?
+- [Point](motor_action) to your [lips](body_part)
+
 ## intent:ask_news
 - What is happening in the [world](topic)?
 - What's the news?
@@ -712,3 +735,12 @@
 - Thank you very much. Talk to you later
 - Thanks a lot. Bye for now
 - Thanks bot. Goodbye
+
+## lookup:motor_action
+  data/motor_action
+
+## lookup:body_part
+  data/body_part
+
+## lookup:direction
+  data/direction
