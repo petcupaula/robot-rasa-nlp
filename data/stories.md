@@ -113,8 +113,77 @@
   - utter_nicetomeetyoutoo
 
 ## my name is
-* my_name_is
+* my_name_is{"username": "Alicia"}
+  - slot{"username": "Alicia"}
   - utter_nicetomeetyou
+
+## user challenges robot to remember user name story 1
+- ask_whatsmyname
+  * utter_idontknowname
+- my_name_is{"username": "Alicia"}
+  - slot{"username": "Alicia"}
+  - utter_nicetomeetyou
+
+## user challenges robot to remember user name story 2
+  - slot{"username": "Paula"}
+- ask_whatsmyname
+  * utter_ask_whatsmyname
+
+## user challenges robot to remember user name story 3
+* greet_hello
+    - utter_greet
+* my_name_is{"username": "Paula"}
+    - slot{"username": "Paula"}
+    - utter_nicetomeetyou
+* ask_whatsmyname
+    - utter_ask_whatsmyname
+
+## user challenges robot to remember user name story 4
+* greet_hello
+    - utter_greet
+* ask_whoisit
+    - utter_ask_whoisit
+    - utter_idontknowname
+* my_name_is{"username": "Paula"}
+    - slot{"username": "Paula"}
+    - utter_nicetomeetyou
+* ask_whatsmyname
+    - utter_ask_whatsmyname
+
+## user challenges robot to remember user name story 5
+* greet_hello
+    - utter_greet
+* ask_whoisit
+    - utter_ask_whoisit
+* nicetomeetyou
+    - utter_idontknowname
+* my_name_is{"username": "Jack"}
+    - slot{"username": "Jack"}
+    - utter_nicetomeetyou
+* ask_whatsmyname
+    - utter_ask_whatsmyname
+
+## user challenges robot to remember user name story 6
+* ask_whatsmyname
+    - utter_ask_whatsmyname
+* deny
+    - utter_idontknowname
+* my_name_is{"username": "Jack"}
+    - slot{"username": "Jack"}
+    - utter_nicetomeetyou
+
+## user challenges robot to remember user name story 7
+* greet_hello
+    - utter_greet
+* ask_whatsmyname
+    - utter_ask_whatsmyname
+* deny
+    - utter_idontknowname
+* my_name_is{"username":"paula"}
+    - slot{"username":"paula"}
+    - utter_nicetomeetyou
+* affirm
+    - utter_nicetomeetyoutoo
 
 ## get weather story 1
 * greet_hello

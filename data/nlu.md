@@ -200,6 +200,8 @@
 - What's new?
 - What's up
 - how r u ?
+- how are you [Brian](botname)
+- how you doing [Brian](botname)
 
 ## intent:ask_howhelp
 - How can you help me?
@@ -436,6 +438,12 @@
 - in [Lithuania](GPE)
 - Oh, sorry, [Amsterdam](GPE)
 
+## intent:ask_whatsmyname
+- Do you remember my name
+- What is my name
+- What was my name
+- Do you know my name?
+
 ## intent:ask_wherefrom
 - Where are you from?
 - Where do you come from?
@@ -451,6 +459,8 @@
 - who am i speaking with
 - who are you?
 - hi! what's your name?
+- What's your name?
+- Do you have a name?
 
 ## intent:canthelp
 - that was shit, you're not helping
@@ -534,6 +544,9 @@
 - bye for now
 - bye was nice talking to you
 - talk to you later
+- talk to you later, [Brian](botname)
+- catch you later, robot
+- bye bye, [Brian](botname)
 
 ## intent:greet_hello
 - hey
@@ -564,6 +577,9 @@
 - what up
 - hello robot
 - hey robot
+- hi [Brian](botname)
+- hello [Brian](botname)
+- what's up [Brian](botname)
 
 ## intent:initiate_chitchat
 - /initiate_chitchat
@@ -605,17 +621,25 @@
 - I am disappointed
 
 ## intent:my_name_is
-- I am [Martin](PERSON)
-- I am [Paula](PERSON)
-- I'm [Steven](PERSON)
-- im [Jack](PERSON)
-- My name is [Steven Spielberg](PERSON)
-- My name is [Paula](PERSON)
+- I am [Martin](username)
+- I am [Paula](username)
+- I'm [Steven](username)
+- im [Jack](username)
+- My name is [Steven Spielberg](username)
+- My name is [Paula](username)
+- I'm [Alicia](username)
+- Remember my name is [Paula](username)
+- Call me [Sally](username)
+- [Stan](username) is my name
+- Some call me [Julia](username)
+- You can always call me [Jack](username)
+- Just call me [Jarvis](username)
 
 ## intent:nicetomeetyou
 - Nice to meet you
 - It was nice talking to you
 - It was nice to meet you
+- Nice to meet you, [Brian](botname)
 
 ## intent:opinion+negative
 - ugh

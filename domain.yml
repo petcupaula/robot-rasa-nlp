@@ -14,6 +14,7 @@ intents:
 - ask_restaurant
 - ask_plan
 - ask_real
+- ask_whatsmyname
 - ask_wherelive
 - ask_whoisit
 - canthelp
@@ -63,6 +64,8 @@ intents:
 - ask_motor_action
 - summon_assistant
 - initiate_chitchat
+- utter_ask_whatsmyname
+- utter_idontknowname
 entities:
 - cuisine
 - bot
@@ -75,6 +78,8 @@ entities:
 - body_part
 - motor_action
 - direction
+- botname
+- username
 slots:
   DATE:
     type: text
@@ -88,6 +93,10 @@ slots:
     - alexa
     - google assistant
     - cortana
+  botname:
+    type: categorical
+    values:
+    - brian
   month:
     type: categorical
     values:
@@ -105,6 +114,9 @@ slots:
     - december
   topic:
     type: text
+  username:
+    type: text
+    initial_value: human
 templates:
   utter_greet:
   - text: Hey! How are you?
@@ -156,8 +168,8 @@ templates:
   - text: I am a robot.
   - text: Would it make a difference if I was not human?
   utter_ask_whoisit:
-  - text: I am Brian
-  - text: My name is Brian
+  - text: I am {botname}
+  - text: My name is {botname}
   utter_ask_howold:
   - text: 42, of course.
   - text: Old enough.
@@ -200,8 +212,15 @@ templates:
   - text: Pleased to meet you too!
   - text: Likewise!
   utter_nicetomeetyou:
-  - text: It's nice to meet you, {PERSON}.
-  - text: Nice to meet you, {PERSON}.
+  - text: It's nice to meet you, {username}.
+  - text: Nice to meet you, {username}.
+  utter_ask_whatsmyname:
+  - text: Of course, {username}.
+  - text: It was {username}, right?
+  - text: How could I forget, {username}?
+  utter_idontknowname:
+  - text: So what is your name?
+  - text: I'm not sure we were properly introduced. What's your name?
   utter_ask_joke:
   - text: Why are eggs not very much into jokes? - Because they could crack up.
   - text: Do you know a tree’s favorite drink? - Root beer!
@@ -260,6 +279,7 @@ templates:
   - text: Do you want to do something fun today?
   - text: What's our plan for the rest of the day?
   - text: Should we order some food?
+  - text: Hey. Just wanted you to know that you're doing great!
   utter_maybe:
   - text: Alright
   - text: Sure
@@ -367,6 +387,8 @@ actions:
 - utter_dialogstarter
 - utter_ask_secret
 - utter_nicetomeetyoutoo
+- utter_ask_whatsmyname
+- utter_idontknowname
 - utter_ask_location
 - utter_ask_good
 - utter_ask_sing
@@ -385,3 +407,5 @@ actions:
 - utter_howhelp
 - utter_maybe
 - utter_thank
+- my_name_is
+- ask_whatsmyname
