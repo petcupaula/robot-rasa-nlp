@@ -27,28 +27,34 @@ os.environ.update(dotenv_values())
 #         return []
 
 class ActionGetWeather(Action):
-    # Based on code here: https://github.com/JustinaPetr/Weatherbot_Tutorial/blob/master/Full_Code_Latest/actions.py
 
     def name(self) -> Text:
         return 'action_get_weather'
 
     def run(self, dispatcher, tracker, domain) -> List[Dict[Text, Any]]:
-        from apixu.client import ApixuClient
-        api_key = os.environ['APIXUKEY']
-        client = ApixuClient(api_key=api_key, lang="en")
-        
-        loc = ('Copenhagen', tracker.get_slot('GPE'))[bool(tracker.get_slot('GPE'))]
-        current = client.current(q=loc)
-        
-        country = current['location']['country']
-        city = current['location']['name']
-        condition = current['current']['condition']['text']
-        temperature_c = current['current']['temp_c']
-        humidity = current['current']['humidity']
-        wind_mph = current['current']['wind_mph']
+        import requests
+        import json
 
-        response = """It is currently {} in {} at the moment. The temperature is {} degrees, the humidity is {}% and the wind speed is {} mph.""".format(condition, city, temperature_c, humidity, wind_mph)
-                        
+        api_key = os.environ['APIXUKEY']
+        loc = ('Copenhagen', tracker.get_slot('GPE'))[bool(tracker.get_slot('GPE'))]
+        
+        url = 'http://api.weatherstack.com/current?access_key={api_key}&query={location}&units=m'.format(api_key=api_key, location=loc)
+
+        print(url)
+
+        response = requests.get(url).text
+        current = json.loads(response)
+        print(current)
+        
+        #country = current['location']['country']
+        city = current['location']['name']
+        condition = current['current']['weather_descriptions'][0]
+        temperature_c = current['current']['temperature']
+        humidity = current['current']['humidity']
+        wind_mph = current['current']['wind_speed']
+
+        response = """It is {} in {} at the moment. The temperature is {} degrees, the humidity is {}% and the wind speed is {} mph.""".format(condition, city, temperature_c, humidity, wind_mph)
+        
         dispatcher.utter_message(response)
         return [SlotSet('GPE',loc)]
 
