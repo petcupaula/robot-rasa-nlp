@@ -39,13 +39,10 @@ class ActionGetWeather(Action):
         loc = ('Copenhagen', tracker.get_slot('GPE'))[bool(tracker.get_slot('GPE'))]
         
         url = 'http://api.weatherstack.com/current?access_key={api_key}&query={location}&units=m'.format(api_key=api_key, location=loc)
-
-        print(url)
-
+        
         response = requests.get(url).text
         current = json.loads(response)
-        print(current)
-        
+
         #country = current['location']['country']
         city = current['location']['name']
         condition = current['current']['weather_descriptions'][0]
@@ -53,7 +50,7 @@ class ActionGetWeather(Action):
         humidity = current['current']['humidity']
         wind_mph = current['current']['wind_speed']
 
-        response = """It is {} in {} at the moment. The temperature is {} degrees, the humidity is {}% and the wind speed is {} mph.""".format(condition, city, temperature_c, humidity, wind_mph)
+        response = """The weather condition is {} in {} at the moment. The temperature is {} degrees, the humidity is {}% and the wind speed is {} mph.""".format(condition, city, temperature_c, humidity, wind_mph)
         
         dispatcher.utter_message(response)
         return [SlotSet('GPE',loc)]
